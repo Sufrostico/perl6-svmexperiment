@@ -14,3 +14,7 @@ Apoya el entrenamie.to de modelos
 
 ## paso 3
 Apoya la predicción de las instancias
+
+
+Nota: el proceso se debe ejecutar paso a paso por que todavía o esta listo de
+forma completa.
