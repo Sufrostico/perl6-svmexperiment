@@ -1,0 +1,11 @@
+[ general ]
+dataset = 'Archivo de texto'
+subconjuntos = 5
+
+[ tratamiento lobo1 ]
+comando = 'ls'
+
+[ tratamiento lobo2 ]
+comando = 'ls'
+
+
