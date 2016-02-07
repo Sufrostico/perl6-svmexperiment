@@ -7,8 +7,16 @@ method TOP($/){
 };
 
 method element($/){
-    say "  -> {$/<identifier>».made}";
-    $/.make: $<attributes>.made;
+    # say "  -> {$/<identifier>».made}";
+    # $/.make: $<attributes>.made;
+    
+    my %resultado;
+    my %atributos = $<attributes>.made; 
+    my $llave = $/<identifier>».made;
+
+    %resultado{$llave} = %atributos;
+
+    make %resultado;
 };
 
 method attributes($/){
