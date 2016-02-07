@@ -3,12 +3,11 @@ use v6.c;
 unit class FileActions is export;
 
 method TOP($/){
-
     $/.make: $<element>.map(*.made);
 };
 
 method element($/){
-
+    say "  -> {$/<identifier>».made}";
     $/.make: $<attributes>.made;
 };
 

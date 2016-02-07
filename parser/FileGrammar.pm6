@@ -7,9 +7,7 @@ unit grammar FileGrammar is export;
     }
 
     token element {
-        # '[ general ]'
-        '[' ' '* <identifier> ' '* ']' \n <attributes>
-        #'[' ' '* <identifier> ' '+ [<identifier> ' '*]* ']' \n <attributes>
+        '[' ' '* <identifier> [' '+ <identifier> ] ** 0..1 ' '*  ']' \n <attributes> 
     }
 
     token attributes {
@@ -25,4 +23,4 @@ unit grammar FileGrammar is export;
 
     token attribute-separator { \n }
     token element-separator { <empty-line> }
-    token empty-line { ^$\n }
+    token empty-line { \n\n }

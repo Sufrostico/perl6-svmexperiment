@@ -11,4 +11,4 @@ my $texto = slurp "config";
 my $a = FileActions.new(); 
 my $parser = FileGrammar.subparse($texto, :actions($a));
 
-say $parser.made;
+ $parser.made;
