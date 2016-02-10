@@ -18,7 +18,7 @@ unit grammar FileGrammar is export;
         <identifier> ' = ' <value>
     }
 
-    token identifier { \w+ }
+    token identifier { <[\w-]>+ }
     token value { <-["\\\t\n]>+ }
 
     token attribute-separator { \n }

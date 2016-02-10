@@ -13,6 +13,7 @@ method element($/){
     my %resultado;
     my %atributos = $<attributes>.made; 
     my $llave = $/<identifier>».made;
+    say $llave;
 
     %resultado{$llave} = %atributos;
 
@@ -30,7 +31,6 @@ method attribute($/) {
 };
 
 method identifier($/) {
-
     make ~$/;
 };
 
