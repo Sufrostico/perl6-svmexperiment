@@ -14,12 +14,14 @@ sub main(){
     my $archivo = @*ARGS[1];
     my $tamaño = @*ARGS[2];
 
+    my $basename = IO::Path.new($archivo).basename;
+
     # $tamaño 3040
 
     for 1..$cantidad_subconjuntos -> $subconjunto {
         say "Generando subconjunto $subconjunto";
-        #shell("svm-subset -s 1 $archivo $tamaño $archivo.train.$subconjunto $archivo.test.$subconjunto");
-        say("svm-subset -s 1 $archivo $tamaño $archivo.train.$subconjunto $archivo.test.$subconjunto");
+        shell("svm-subset -s 1 $archivo $tamaño $basename.train.$subconjunto $basename.test.$subconjunto");
+        #say("svm-subset -s 1 $archivo $tamaño $archivo.train.$subconjunto $archivo.test.$subconjunto");
     }
 }
 
