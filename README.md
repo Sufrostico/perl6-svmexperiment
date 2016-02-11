@@ -14,3 +14,5 @@ Apoya el entrenamie.to de modelos
 
 ## paso 3
 Apoya la predicción de las instancias
+
+Nota: el proceso todavía no esta integrado con el parser
