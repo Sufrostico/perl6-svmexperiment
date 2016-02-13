@@ -13,7 +13,7 @@ method element($/){
     my %resultado;
     my %atributos = $<attributes>.made; 
     my $llave = $/<identifier>».made;
-    say $llave;
+    $llave = $llave.pop;
 
     %resultado{$llave} = %atributos;
 

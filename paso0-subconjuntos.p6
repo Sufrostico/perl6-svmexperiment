@@ -1,18 +1,33 @@
 #!/usr/bin/env perl6
+
 use v6.c;
+use lib 'parser';
+use process-config;
 
 sub main(){
 
-    if @*ARGS.elems < 3 {
+    #if @*ARGS.elems < 3 {
 
-        say "paso0 <cantidad_subconjuntos> <archivo base> <tamaño> ";
-        say "";
-        die "Imposible proseguir";
-    }
+    #   say "paso0 <cantidad_subconjuntos> <archivo base> <tamaño> ";
+    #   say "";
+    #   die "Imposible proseguir";
+    #}
 
-    my $cantidad_subconjuntos = @*ARGS[0];
-    my $archivo = @*ARGS[1];
-    my $tamaño = @*ARGS[2];
+    #my $cantidad_subconjuntos = @*ARGS[0];
+    #my $archivo = @*ARGS[1];
+    #my $tamaño = @*ARGS[2];
+
+    my %config = parsear_archivo();
+
+    say '---';
+    say %config<general>;
+    say '---';
+
+
+    my $cantidad_subconjuntos = %config<general><subconjuntos>;
+    my $archivo = %config<general><dataset>;
+    my $tamaño = %config<general><tamaño-subconjunto>;
+
 
     my $basename = IO::Path.new($archivo).basename;
 

@@ -1,7 +1,5 @@
 use v6.c;
 
-use lib '.';
-
 use FileActions;
 use FileGrammar;
 
@@ -16,4 +14,3 @@ sub parsear_archivo() is export {
 
     return %res;
 }
-

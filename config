@@ -1,6 +1,7 @@
 [ general ]
-dataset = Freq20.2C.Todo.libsvm
+dataset = Freq20.2C
 subconjuntos = 5
+tamaño-subconjunto = 3040
 
 [ malla-1 ]
 comando = svm-grid
