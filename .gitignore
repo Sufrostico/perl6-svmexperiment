@@ -2,3 +2,7 @@
 .precomp
 .*swp
 .*swo
+tags
+*.train.*
+*.test.*
+*.status
