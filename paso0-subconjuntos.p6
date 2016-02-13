@@ -6,23 +6,7 @@ use process-config;
 
 sub main(){
 
-    #if @*ARGS.elems < 3 {
-
-    #   say "paso0 <cantidad_subconjuntos> <archivo base> <tamaño> ";
-    #   say "";
-    #   die "Imposible proseguir";
-    #}
-
-    #my $cantidad_subconjuntos = @*ARGS[0];
-    #my $archivo = @*ARGS[1];
-    #my $tamaño = @*ARGS[2];
-
     my %config = parsear_archivo();
-
-    say '---';
-    say %config<general>;
-    say '---';
-
 
     my $cantidad_subconjuntos = %config<general><subconjuntos>;
     my $archivo = %config<general><dataset>;
