@@ -7,18 +7,44 @@ method TOP($/){
 };
 
 method element($/){
-    # say "  -> {$/<identifier>».made}";
-    # $/.make: $<attributes>.made;
     
     my %resultado;
-    my %atributos = $<attributes>.made; 
+    my %atributos;
+    my @orden-ejecución;
+
+    # Extrae el nombre del elemento
     my $llave = $/<identifier>».made;
     $llave = $llave.pop;
 
-    %resultado{$llave} = %atributos;
+    if $/<order-list> === Nil {
+
+        # Saca los atributos
+        %atributos = $<attributes>.made; 
+
+        # Los asigna
+        %resultado{$llave} = %atributos;
+
+    } else {
+
+        $/<identifier>;
+        say "Si es un order list";
+
+        # Saca el orden de ejecución
+        @orden-ejecución =  $<order-list>.made;
+
+        # Asigna el orden de ejecución  
+        %resultado{$llave} = @orden-ejecución;
+
+    }
+
 
     make %resultado;
 };
+
+method order-list($/) {
+
+    $/.make: $<identifier>.map(*.made);
+}
 
 method attributes($/){
 

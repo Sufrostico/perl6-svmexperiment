@@ -7,7 +7,11 @@ unit grammar FileGrammar is export;
     }
 
     token element {
-        '[' ' '* <identifier> [' '+ <identifier> ] ** 0..1 ' '*  ']' \n <attributes> 
+        '[' ' '* <identifier> [' '+ <identifier> ] ** 0..1 ' '*  ']' \n [ <attributes> | <order-list> ] 
+    }
+
+    token order-list {
+        <identifier> [ \n <identifier> ]* 
     }
 
     token attributes {
