@@ -1,9 +1,13 @@
 #!/usr/bin/env perl6
-use v6;
+use v6.c;
 
+use lib 'parser';
+use process-config;
+
+my %configuracion = parsear_archivo();
 
 my $bitacora = "predicción.status";
-my $archivo = "2CTASSCasasola.train";
+my $archivo = "{%configuracion<general><dataset>}.train";
 
 # Plan de ejecución para predicciones
 my @orden = <gwo-55-2 gwo-55-3 malla-2 malla-5 gwo-55-4 gwo-55-1 gwo-165-5
