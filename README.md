@@ -15,5 +15,6 @@ Apoya el entrenamie.to de modelos
 ## paso 3
 Apoya la predicción de las instancias
 
-Nota: el proceso todavía no esta integrado con el parser
+Nota: el proceso esta solo parcialmente integrado con el parser y no todo el
+proceso se puede ejecutar de forma automatizada.
 
