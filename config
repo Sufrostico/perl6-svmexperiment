@@ -37,6 +37,8 @@ subconjunto = 1
 comando = perl6 gwo.p6
 parametros = 4 14
 subconjunto = 2
+c = 11.724954881234
+g = -12.2053228135595
 
 [ gwo-55-3 ]
 comando = perl6 gwo.p6
