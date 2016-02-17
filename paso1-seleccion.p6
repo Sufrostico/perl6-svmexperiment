@@ -13,14 +13,20 @@ my $archivo = "{%configuracion<general><dataset>}.train";
 my @orden = @(%configuracion<orden>);
 
 my %tratamiento;
+my $paso = 1;
 spurt $bitacora, "";
 
 for @orden -> $id_actual {
 
-   %tratamiento = %configuracion{$id_actual}; 
+    $paso = %configuracion{$id_actual}{"paso"};
 
-   spurt $bitacora, "$id_actual\n", :append;
-   #shell("%tratamiento{comando} %tratamiento{parametros} $archivo.%tratamiento{subconjunto}");
-   say "%tratamiento{'comando'} %tratamiento{'parametros'} $archivo.%tratamiento{'subconjunto'}";
+    if ( ($paso === Any) or ($paso <= 1 ) ) {
+
+        %tratamiento = %configuracion{$id_actual}; 
+
+        spurt $bitacora, "$id_actual\n", :append;
+        #shell("%tratamiento{comando} %tratamiento{parametros} $archivo.%tratamiento{subconjunto}");
+        say "%tratamiento{'comando'} %tratamiento{'parametros'} $archivo.%tratamiento{'subconjunto'}";
+    } 
 }
 

@@ -13,6 +13,7 @@ my $archivo = "{%configuracion<general><dataset>}.test";
 my @orden = @(%configuracion<orden>);
 
 my %tratamiento;
+my $paso = 3;
 # vacía la bitácora
 spurt $bitacora, "";
 
@@ -20,12 +21,16 @@ spurt $bitacora, "";
 for @orden -> $id_actual {
 
     say "$id_actual";
+    $paso = %configuracion{$id_actual}{"paso"};
 
-   %tratamiento = %configuracion{$id_actual}; 
+    if $paso === Any or $paso <= 3 {
 
-    spurt $bitacora, "$id_actual\n", :append;
-    #shell("svm-predict $archivo.%tratamiento{'subconjunto'} $id_actual.model $id_actual.predict");
-    say("svm-predict $archivo.%tratamiento{'subconjunto'} $id_actual.model $id_actual.predict");
-    say "\n";
+       %tratamiento = %configuracion{$id_actual}; 
+
+        spurt $bitacora, "$id_actual\n", :append;
+        #shell("svm-predict $archivo.%tratamiento{'subconjunto'} $id_actual.model $id_actual.predict");
+        say("svm-predict $archivo.%tratamiento{'subconjunto'} $id_actual.model $id_actual.predict");
+        say "\n";
+    }
 }
 
