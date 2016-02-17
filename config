@@ -104,18 +104,23 @@ parametros = 4 42
 subconjunto = 5
 
 [ default-1 ]
+paso = 2
 subconjunto = 1
 
 [ default-2 ]
+paso = 2
 subconjunto = 2
 
 [ default-3 ]
+paso = 2
 subconjunto = 3
 
 [ default-4 ]
+paso = 2
 subconjunto = 4
 
 [ default-5 ]
+paso = 2
 subconjunto = 5
 
 [ orden ]
@@ -139,4 +144,5 @@ malla-1
 malla-3
 gwo-110-5
 malla-4
+default-5
 
