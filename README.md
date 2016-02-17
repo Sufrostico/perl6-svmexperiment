@@ -15,6 +15,8 @@ Apoya el entrenamie.to de modelos
 ## paso 3
 Apoya la predicción de las instancias
 
-Nota: el proceso esta solo parcialmente integrado con el parser y no todo el
-proceso se puede ejecutar de forma automatizada.
+Nota:  
+ - No todo el proceso se puede ejecutar de forma automatizada.
+ - Particularmente entre el paso 1 y 2 hay que copiar manualmente los resultados de la selección
+ - Todavía no sabe como manejar los casos donde no se va a correr la selección y se van a usar casos por default.
 
