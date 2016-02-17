@@ -8,10 +8,9 @@ my %configuracion = parsear_archivo();
 
 my $bitacora = "modelos.status";
 my $archivo = "{%configuracion<general><dataset>}.train";
+
     
 my @orden = @(%configuracion<orden>);
-
-say %configuracion;
 
 my %tratamiento;
 my $paso = 2;
@@ -37,8 +36,8 @@ for @orden -> $id_actual {
 
         spurt $bitacora, "$id_actual\n", :append;
 
-        #shell("svm-train -s0 -t2 $parametros $archivo.%tratamiento{'subconjunto'}");
-        say "svm-train -s0 -t2 $parametros $archivo.%tratamiento{'subconjunto'}";
+        shell("$comando $parametros $archivo.%tratamiento{'subconjunto'}");
+        say "%tratamiento{'paso2-comando'} %tratamiento{'paso2-parametros'} $archivo.%tratamiento{'subconjunto'}";
         say "\n";
     } 
 }
