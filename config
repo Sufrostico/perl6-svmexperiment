@@ -2,54 +2,46 @@
 dataset = Freq20.2C
 subconjuntos = 5
 tamaño-subconjunto = 3040
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+paso2-comando = svm-train -s0 -t2  
+paso2-parametros = 'Este no se utiliza, usar c = <valor> y g = <valor>'
+paso3-comando = svm-predict
+paso3-parametros = ''
 
 [ malla-1 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 1
 
 [ malla-2 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 2
 
 [ malla-3 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 3
 
 [ malla-4 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 4
 
 [ malla-5 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 5
 
 [ gwo-55-1 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 1
 
 [ gwo-55-2 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 2
 c = 11.724954881234
 g = -12.2053228135595
@@ -57,92 +49,66 @@ g = -12.2053228135595
 [ gwo-55-3 ]
 paso1-comando = perl6 gwo.p6svm-predict
 paso1-parametros = 4 14
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 3
 
 [ gwo-55-4 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 4
 
 [ gwo-55-5 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 5
 
 [ gwo-110-1 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 1
 
 [ gwo-110-2 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 2
 
 [ gwo-110-3 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 3
 
 [ gwo-110-4 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 4
 
 [ gwo-110-5 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 5
 
 [ gwo-165-1 ]
 paso1-comando = perl6 gwo.p6
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 paso1-parametros = 4 42
 subconjunto = 1
 
 [ gwo-165-2 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 2
 
 [ gwo-165-3 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 3
 
 [ gwo-165-4 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 4
 
 [ gwo-165-5 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
-paso2-comando = svm-train -s0 -t2  
-paso3-comando = svm-predict
 subconjunto = 5
 
 [ default-1 ]
