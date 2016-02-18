@@ -18,15 +18,18 @@ spurt $bitacora, "";
 
 for @orden -> $id_actual {
 
+    say $id_actual;
+
     $paso = %configuracion{$id_actual}{"paso"};
 
-    if ( ($paso === Any) or ($paso <= 1 ) ) {
+    if $paso <= 1 {
 
         %tratamiento = %configuracion{$id_actual}; 
 
         spurt $bitacora, "$id_actual\n", :append;
         #shell("%tratamiento{'paso1-comando'} %tratamiento{'paso1-parametros'} $archivo.%tratamiento{'subconjunto'}");
         say "%tratamiento{'paso1-comando'} %tratamiento{'paso1-parametros'} $archivo.%tratamiento{'subconjunto'}";
+        say "\n";
     } 
 }
 
