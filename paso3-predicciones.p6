@@ -23,7 +23,7 @@ for @orden -> $id_actual {
     say "$id_actual";
     $paso = %configuracion{$id_actual}{"paso"};
 
-    if $paso === Any or $paso <= 3 {
+    if $paso <= 3 {
 
        %tratamiento = %configuracion{$id_actual}; 
 
