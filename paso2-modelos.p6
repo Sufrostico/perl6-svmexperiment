@@ -30,14 +30,14 @@ for @orden -> $id_actual {
         $parametros = "";
     }
 
-    if ( ($paso === Any) or ($paso <= 2 ) ) {
+    if ( ($paso <= 2 ) ) {
 
         %tratamiento = %configuracion{$id_actual}; 
 
         spurt $bitacora, "$id_actual\n", :append;
 
         shell("$comando $parametros $archivo.%tratamiento{'subconjunto'}");
-        say "%tratamiento{'paso2-comando'} %tratamiento{'paso2-parametros'} $archivo.%tratamiento{'subconjunto'}";
+        say "%tratamiento{'paso2-comando'} $parametros $archivo.%tratamiento{'subconjunto'}";
         say "\n";
     } 
 }
