@@ -6,114 +6,152 @@ paso1-comando = svm-grid
 paso1-parametros = -v 10
 paso2-comando = svm-train -s0 -t2  
 paso2-parametros = 'Este no se utiliza, usar c = <valor> y g = <valor>'
-paso3-comando = svm-predict
+paso3-comando = /home/sufrostico/Programas/libsvm-3.20/svm-predict
 paso3-parametros = ''
 
 [ malla-1 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
 subconjunto = 1
+paso2-c = 9
+paso2-g = -11
 
 [ malla-2 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
 subconjunto = 2
+paso2-c = 13
+paso2-g = -15
 
 [ malla-3 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
 subconjunto = 3
+paso2-c = 9
+paso2-g = -13
 
 [ malla-4 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
 subconjunto = 4
+paso2-c = 11
+paso2-g = -13
 
 [ malla-5 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
 subconjunto = 5
+paso2-c = 13
+paso2-g = -15
 
 [ gwo-55-1 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
 subconjunto = 1
+paso2-c = 9.685304630027
+paso2-g = -10.8298537964154
 
 [ gwo-55-2 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
 subconjunto = 2
-paso2-c = 11.724954881234
-paso2-g = -12.2053228135595
+paso2-c = 7.41997895503164
+paso2-g = -10.4414720313548
 
 [ gwo-55-3 ]
-paso1-comando = perl6 gwo.p6svm-predict
+paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
 subconjunto = 3
+paso2-c = 10.6434031788662
+paso2-g = -14.1029720065223
 
 [ gwo-55-4 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
 subconjunto = 4
+paso2-c = 7.93354702676749
+paso2-g = -11.0934373896816
 
 [ gwo-55-5 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
 subconjunto = 5
+paso2-c = 9.20165412679813
+paso2-g = -12.9931688867777
 
 [ gwo-110-1 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
 subconjunto = 1
+paso2-c = 9.24566837563331
+paso2-g = -11.8317797721569
 
 [ gwo-110-2 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
 subconjunto = 2
+paso2-c = 14.7015612740797
+paso2-g = -13.0444941914721
 
 [ gwo-110-3 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
 subconjunto = 3
+paso2-c = 9.84644097912471
+paso2-g = -12.7461485032504
 
 [ gwo-110-4 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
 subconjunto = 4
+paso2-c = 11.3624648889543
+paso2-g = -13.537750735555
 
 [ gwo-110-5 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
 subconjunto = 5
+paso2-c = 9.12113205521464
+paso2-g = -14.4977189517521
 
 [ gwo-165-1 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
 subconjunto = 1
+paso2-c = 6.54513307958676
+paso2-g = -10.0805560977282
 
 [ gwo-165-2 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
 subconjunto = 2
+paso2-c = 11.6580263146716
+paso2-g = -13.8723243545116
 
 [ gwo-165-3 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
 subconjunto = 3
+paso2-c = 10.4231111667469
+paso2-g = -14.5185487046943
 
 [ gwo-165-4 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
 subconjunto = 4
+paso2-c = 10.6062149793469
+paso2-g = -14.1349042903931
 
 [ gwo-165-5 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
 subconjunto = 5
+paso2-c = 10.7723201963631
+paso2-g = -13.4839479875842
 
 [ default-1 ]
-paso = 2
 subconjunto = 1
+paso = 2
 
 [ default-2 ]
 paso = 2
@@ -152,5 +190,9 @@ malla-1
 malla-3
 gwo-110-5
 malla-4
+default-1
+default-2
+default-3
+default-4
 default-5
 

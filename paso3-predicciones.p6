@@ -6,6 +6,7 @@ use process-config;
 
 my %configuracion = parsear_archivo();
 
+
 my $bitacora = "predicción.status";
 my $archivo = "{%configuracion<general><dataset>}.test";
 
@@ -16,6 +17,7 @@ my %tratamiento;
 my $paso = 3;
 # vacía la bitácora
 spurt $bitacora, "";
+
 
 # Ejecuta las predicciones
 for @orden -> $id_actual {
@@ -28,8 +30,8 @@ for @orden -> $id_actual {
        %tratamiento = %configuracion{$id_actual}; 
 
         spurt $bitacora, "$id_actual\n", :append;
-        #shell("%tratamiento{'paso3-comando'} %tratamiento{'paso3-parametros'}  $archivo.%tratamiento{'subconjunto'} $id_actual.model $id_actual.predict");
-        say "%tratamiento{'paso3-comando'} %tratamiento{'paso3-parametros'}  $archivo.%tratamiento{'subconjunto'} $id_actual.model $id_actual.predict";
+        say "%tratamiento{'paso3-comando'}   $archivo.%tratamiento{'subconjunto'} $id_actual.model $id_actual.predict";
+        shell( "%tratamiento{'paso3-comando'}   $archivo.%tratamiento{'subconjunto'} $id_actual.model $id_actual.predict");
         say "\n";
     }
 }

@@ -23,6 +23,8 @@ for @orden -> $id_actual {
     say $id_actual;
     $paso = %configuracion{$id_actual}{"paso"};
 
+    %tratamiento = %configuracion{$id_actual}; 
+
     if %configuracion{$id_actual}<c> and %configuracion{$id_actual}<c> {
         $parametros = " -c {2**%tratamiento{'paso2-c'} } -g {2**%tratamiento{'paso2-g'}} "
 
@@ -36,8 +38,8 @@ for @orden -> $id_actual {
 
         spurt $bitacora, "$id_actual\n", :append;
 
-        shell("$comando $parametros $archivo.%tratamiento{'subconjunto'}");
-        say "%tratamiento{'paso2-comando'} $parametros $archivo.%tratamiento{'subconjunto'}";
+        say "%tratamiento{'paso2-comando'} $parametros $archivo.%tratamiento{'subconjunto'} $id_actual.model";
+        shell("%tratamiento{'paso2-comando'} $parametros $archivo.%tratamiento{'subconjunto'} $id_actual.model");
         say "\n";
     } 
 }
