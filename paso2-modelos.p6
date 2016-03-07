@@ -25,7 +25,7 @@ for @orden -> $id_actual {
 
     %tratamiento = %configuracion{$id_actual}; 
 
-    if %configuracion{$id_actual}<c> and %configuracion{$id_actual}<c> {
+    if %configuracion{$id_actual}<paso2-c> and %configuracion{$id_actual}<paso2-g> {
         $parametros = " -c {2**%tratamiento{'paso2-c'} } -g {2**%tratamiento{'paso2-g'}} "
 
     } else {
