@@ -1,4 +1,3 @@
-use v6.c;
 
 unit class FileActions is export;
 
@@ -27,16 +26,13 @@ method element($/){
     } else {
 
         $/<identifier>;
-        say "Si es un order list";
 
         # Saca el orden de ejecución
         @orden-ejecución =  $<order-list>.made;
 
         # Asigna el orden de ejecución  
         %resultado{$llave} = @orden-ejecución;
-
     }
-
 
     make %resultado;
 };

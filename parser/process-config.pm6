@@ -5,6 +5,7 @@ use FileGrammar;
 
 sub normalizar_archivo( %configuración){
 
+
     my @orden = @(%configuración<orden>);
 
     for @orden -> $id_actual {
@@ -38,7 +39,6 @@ sub normalizar_archivo( %configuración){
 
         # para el elemento paso 
         if %configuración{$id_actual}<paso> === Any {
-            say "Aquí el paso no existe----> $id_actual";
             %configuración{$id_actual}<paso> = 0; 
         }
     }
