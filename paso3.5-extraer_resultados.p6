@@ -12,12 +12,9 @@ my @archivo = split "\n", $texto ;
 
 loop (my $i = 0; $i < @archivo.elems; $i++){
 
-
     given @archivo[$i] {
 
-#        when /^^ [ malla'-'\d+ | default'-'\d+  | gwo'-'\d+'-'\d+ ] $$/ {
-        when /^^ [ malla | default | gwo ]'-'\d+ ('-' \d+)? $$/ {
-#       when / gwo'-'56'-'\d+ / {
+        when /^^ [ malla || default || gwo ]'-'\d+ ('-' \d+)? $$/ {
 
             reunir_resultados($_, @archivo, $i+2);
         }
@@ -50,6 +47,4 @@ sub reunir_resultados($tratamiento, @archivo, $inicio) {
         }
     }
 }
-
-
 
