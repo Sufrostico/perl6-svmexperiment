@@ -12,6 +12,7 @@ my $archivo = "{%configuracion<general><dataset>}.train";
     
 my @orden = @(%configuracion<orden>);
 
+
 my %tratamiento;
 my $paso = 2;
 my $parametros = "";

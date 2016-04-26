@@ -8,6 +8,7 @@ use process-config;
 my %configuracion = parsear_archivo();
 
 my $bitacora = "seleccion.status";
+
 my $archivo = "{%configuracion<general><dataset>}.train";
     
 my @orden = @(%configuracion<orden>);
