@@ -21,7 +21,7 @@ sub normalizar_archivo( %configuración){
         
         # para el paso 2
         if %configuración{$id_actual}<paso2-comando> === Any {
-            %configuración{$id_actual}<paso2-comandos> = %configuración<general><paso2-comandos>;
+            %configuración{$id_actual}<paso2-comando> = %configuración<general><paso2-comando>;
         } 
 
         if %configuración{$id_actual}<paso2-parametros> === Any {
@@ -30,7 +30,7 @@ sub normalizar_archivo( %configuración){
 
         # para el paso 3
         if %configuración{$id_actual}<paso3-comando> === Any {
-            %configuración{$id_actual}<paso3-comandos> = %configuración<general><paso3-comandos>;
+            %configuración{$id_actual}<paso3-comando> = %configuración<general><paso3-comando>;
         } 
 
         if %configuración{$id_actual}<paso3-parametros> === Any {
@@ -56,7 +56,7 @@ sub parsear_archivo() is export {
 
     my  %res =   $parser.made;
 
-    %res = normalizar_archivo(%res);
+    my %resultado = normalizar_archivo(%res);
 
-    return %res;
+    return %resultado;
 }
