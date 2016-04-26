@@ -30,7 +30,6 @@ for @orden -> $id_actual {
        %tratamiento = %configuracion{$id_actual}; 
 
         spurt $bitacora, "$id_actual\n", :append;
-        say $id_actual;
         say "%tratamiento{'paso3-comando'}   $archivo.%tratamiento{'subconjunto'} $id_actual.model $id_actual.predict";
         shell( "%tratamiento{'paso3-comando'}   $archivo.%tratamiento{'subconjunto'} $id_actual.model $id_actual.predict");
         say "\n";
