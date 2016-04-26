@@ -5,10 +5,13 @@ if @*ARGS.elems < 1 {
     die "Necesita, al menos, el nombre del archivo como argumento";
 }
 
+
 my $texto = slurp "@*ARGS[0]";
 
 my @archivo = split "\n", $texto ;
 
+
+say "Tratamiento,Accuracy,Precision,Recall,F-score";
 
 loop (my $i = 0; $i < @archivo.elems; $i++){
 
@@ -29,21 +32,22 @@ sub reunir_resultados($tratamiento, @archivo, $inicio) {
 
         given $linea {
 
-            when / 'Precision = '(\d+.\d+)'%' / {
+            when / 'Accuracy = '(\d+.?\d+)'%' / {
                 print "$0,";
             }
 
-            when / 'Recall = '(\d+.\d+)'%' / {
+            when / 'Precision = '(\d+.?\d+)'%' / {
                 print "$0,";
             }
 
-            when / 'F-score = '(\d+.\d+) / {
+            when / 'Recall = '(\d+.?\d+)'%' / {
                 print "$0,";
             }
 
-            when / 'Accuracy = '(\d+.\d+)'%' / {
+            when / 'F-score = '(\d+.?\d+) / {
                 say "$0";
             }
+
         }
     }
 }
