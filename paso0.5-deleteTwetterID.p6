@@ -19,8 +19,8 @@ for @*ARGS ->  $file {
     shell("java -cp ~/wekaexamples/dist/weka.jar weka.filters.unsupervised.attribute.Remove -R 1 -i $file.libsvm -o $file.arff -c first");
 
 # Convierte de ARFF a LIBSVM
-    say "java -cp ~/wekaexamples/dist/weka.jar weka.core.converters.LibSVMSaver -i $file.arff -o new.$file";
-    shell("java -cp ~/wekaexamples/dist/weka.jar weka.core.converters.LibSVMSaver -i $file.arff -o new.$file);
+    say "java -cp ~/wekaexamples/dist/weka.jar weka.core.converters.LibSVMSaver -i $file.arff -o {$file}_new.libsvm";
+    shell("java -cp ~/wekaexamples/dist/weka.jar weka.core.converters.LibSVMSaver -i $file.arff -o {$file}_new.libsvm");
 
 }
 
