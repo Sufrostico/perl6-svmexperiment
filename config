@@ -1,6 +1,6 @@
 [ general ]
 dataset = Freq20.2C
-subconjuntos = 5
+subconjuntos = 20
 tamaño-subconjunto = 3040
 paso1-comando = svm-grid
 paso1-parametros = -v 10
@@ -9,190 +9,584 @@ paso2-parametros = 'Este no se utiliza, usar c = <valor> y g = <valor>'
 paso3-comando = /home/sufrostico/Programas/libsvm-3.20/svm-predict
 paso3-parametros = ''
 
+[ default-1 ]
+subconjunto = 10
+paso = 2
+
+[ default-2 ]
+subconjunto = 2
+paso = 2
+
+[ default-3 ]
+subconjunto = 3
+paso = 2
+
+[ default-4 ]
+subconjunto = 4
+paso = 2
+
+[ default-5 ]
+subconjunto = 5
+paso = 2
+
+[ default-6 ]
+subconjunto = 6
+paso = 2
+
+[ default-7 ]
+subconjunto = 7
+paso = 2
+
+[ default-8 ]
+subconjunto = 8
+paso = 2
+
+[ default-9 ]
+subconjunto = 9
+paso = 2
+
+[ default-10 ]
+subconjunto = 10
+paso = 2
+
+[ default-11 ]
+subconjunto = 11
+paso = 2
+
+[ default-12 ]
+subconjunto = 12
+paso = 2
+
+[ default-13 ]
+subconjunto = 13
+paso = 2
+
+[ default-14 ]
+subconjunto = 14
+paso = 2
+
+[ default-15 ]
+subconjunto = 15
+paso = 2
+
+[ default-16 ]
+subconjunto = 16
+paso = 2
+
+[ default-17 ]
+subconjunto = 17
+paso = 2
+
+[ default-18 ]
+subconjunto = 18
+paso = 2
+
+[ default-19 ]
+subconjunto = 19
+paso = 2
+
+[ default-20 ]
+subconjunto = 20
+paso = 2
+
 [ malla-1 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
 subconjunto = 1
-paso2-c = 9
-paso2-g = -11
 
 [ malla-2 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
 subconjunto = 2
-paso2-c = 13
-paso2-g = -15
 
 [ malla-3 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
 subconjunto = 3
-paso2-c = 9
-paso2-g = -13
 
 [ malla-4 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
 subconjunto = 4
-paso2-c = 11
-paso2-g = -13
 
 [ malla-5 ]
 paso1-comando = svm-grid
 paso1-parametros = -v 10
 subconjunto = 5
-paso2-c = 13
-paso2-g = -15
 
-[ gwo-55-1 ]
+[ malla-6 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 6
+
+[ malla-7 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 7
+
+[ malla-8 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 8
+
+[ malla-9 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 9
+
+[ malla-10 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 10
+
+[ malla-11 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 11
+
+[ malla-12 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 12
+
+[ malla-13 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 13
+
+[ malla-14 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 14
+
+[ malla-15 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 15
+
+[ malla-16 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 16
+
+[ malla-17 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 17
+
+[ malla-18 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 18
+
+[ malla-19 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 19
+
+[ malla-20 ]
+paso1-comando = svm-grid
+paso1-parametros = -v 10
+subconjunto = 20
+
+[ gwo-56-1 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
 subconjunto = 1
-paso2-c = 9.685304630027
-paso2-g = -10.8298537964154
 
-[ gwo-55-2 ]
+[ gwo-56-2 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
 subconjunto = 2
-paso2-c = 7.41997895503164
-paso2-g = -10.4414720313548
 
-[ gwo-55-3 ]
+[ gwo-56-3 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
 subconjunto = 3
-paso2-c = 10.6434031788662
-paso2-g = -14.1029720065223
 
-[ gwo-55-4 ]
+[ gwo-56-4 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
 subconjunto = 4
-paso2-c = 7.93354702676749
-paso2-g = -11.0934373896816
 
-[ gwo-55-5 ]
+[ gwo-56-5 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 14
 subconjunto = 5
-paso2-c = 9.20165412679813
-paso2-g = -12.9931688867777
 
-[ gwo-110-1 ]
+[ gwo-56-6 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 6
+
+[ gwo-56-7 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 7
+
+[ gwo-56-8 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 8
+
+[ gwo-56-9 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 9
+
+[ gwo-56-10 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 10
+
+[ gwo-56-11 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 11
+
+[ gwo-56-12 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 12
+
+[ gwo-56-13 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 13
+
+[ gwo-56-14 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 14
+
+[ gwo-56-15 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 15
+
+[ gwo-56-16 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 16
+
+[ gwo-56-17 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 17
+
+[ gwo-56-18 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 18
+
+[ gwo-56-19 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 19
+
+[ gwo-56-20 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 14
+subconjunto = 20
+
+[ gwo-112-1 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
 subconjunto = 1
-paso2-c = 9.24566837563331
-paso2-g = -11.8317797721569
 
-[ gwo-110-2 ]
+[ gwo-112-2 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
 subconjunto = 2
-paso2-c = 14.7015612740797
-paso2-g = -13.0444941914721
 
-[ gwo-110-3 ]
+[ gwo-112-3 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
 subconjunto = 3
-paso2-c = 9.84644097912471
-paso2-g = -12.7461485032504
 
-[ gwo-110-4 ]
+[ gwo-112-4 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
 subconjunto = 4
-paso2-c = 11.3624648889543
-paso2-g = -13.537750735555
 
-[ gwo-110-5 ]
+[ gwo-112-5 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 28
 subconjunto = 5
-paso2-c = 9.12113205521464
-paso2-g = -14.4977189517521
 
-[ gwo-165-1 ]
+[ gwo-112-6 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 6
+
+[ gwo-112-7 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 7
+
+[ gwo-112-8 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 8
+
+[ gwo-112-9 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 9
+
+[ gwo-112-10 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 10
+
+[ gwo-112-11 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 11
+
+[ gwo-112-12 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 12
+
+[ gwo-112-13 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 13
+
+[ gwo-112-14 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 14
+
+[ gwo-112-15 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 15
+
+[ gwo-112-16 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 16
+
+[ gwo-112-17 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 17
+
+[ gwo-112-18 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 18
+
+[ gwo-112-19 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 19
+
+[ gwo-112-20 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 28
+subconjunto = 20
+
+[ gwo-168-1 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
 subconjunto = 1
-paso2-c = 6.54513307958676
-paso2-g = -10.0805560977282
 
-[ gwo-165-2 ]
+[ gwo-168-2 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
 subconjunto = 2
-paso2-c = 11.6580263146716
-paso2-g = -13.8723243545116
 
-[ gwo-165-3 ]
+[ gwo-168-3 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
 subconjunto = 3
-paso2-c = 10.4231111667469
-paso2-g = -14.5185487046943
 
-[ gwo-165-4 ]
+[ gwo-168-4 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
 subconjunto = 4
-paso2-c = 10.6062149793469
-paso2-g = -14.1349042903931
 
-[ gwo-165-5 ]
+[ gwo-168-5 ]
 paso1-comando = perl6 gwo.p6
 paso1-parametros = 4 42
 subconjunto = 5
-paso2-c = 10.7723201963631
-paso2-g = -13.4839479875842
 
-[ default-1 ]
-subconjunto = 1
-paso = 2
+[ gwo-168-6 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 6
 
-[ default-2 ]
-paso = 2
-subconjunto = 2
+[ gwo-168-7 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 7
 
-[ default-3 ]
-paso = 2
-subconjunto = 3
+[ gwo-168-8 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 8
 
-[ default-4 ]
-paso = 2
-subconjunto = 4
+[ gwo-168-9 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 9
 
-[ default-5 ]
-paso = 2
-subconjunto = 5
+[ gwo-168-10 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 10
+
+[ gwo-168-11 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 11
+
+[ gwo-168-12 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 12
+
+[ gwo-168-13 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 13
+
+[ gwo-168-14 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 14
+
+[ gwo-168-15 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 15
+
+[ gwo-168-16 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 16
+
+[ gwo-168-17 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 17
+
+[ gwo-168-18 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 18
+
+[ gwo-168-19 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 19
+
+[ gwo-168-20 ]
+paso1-comando = perl6 gwo.p6
+paso1-parametros = 4 42
+subconjunto = 20
 
 [ orden ]
-gwo-55-2
-gwo-55-3
-malla-2
 malla-5
-gwo-55-4
-gwo-55-1
-gwo-165-5
-gwo-165-4
-gwo-165-3
-gwo-110-4
-gwo-110-1
-gwo-55-5
-gwo-110-2
-gwo-110-3
-gwo-165-2
-gwo-165-1
-malla-1
-malla-3
-gwo-110-5
+default-17
+gwo-168-18
+gwo-56-4
+gwo-56-17
+gwo-168-14
+gwo-112-14
+malla-12
+default-11
+gwo-112-1
+malla-13
+gwo-112-7
 malla-4
-default-1
+malla-8
+default-19
+gwo-56-11
+gwo-112-15
+malla-14
+default-6
+gwo-112-12
+default-13
+gwo-168-1
 default-2
+gwo-56-18
+gwo-56-9
+gwo-168-5
+gwo-168-20
 default-3
-default-4
+gwo-112-5
+gwo-168-10
+gwo-112-13
+default-8
+gwo-112-8
+gwo-56-16
+gwo-168-12
+default-1
+malla-2
+gwo-56-15
+malla-3
+gwo-112-2
+malla-20
+gwo-168-3
+default-12
+gwo-112-9
+default-9
+gwo-112-4
+gwo-168-16
+malla-9
+gwo-56-1
+gwo-56-20
+gwo-168-7
+malla-19
+default-16
+default-14
+malla-6
+gwo-168-9
+malla-1
+default-10
+gwo-112-18
+gwo-56-5
+gwo-168-6
+gwo-112-11
+gwo-112-16
+gwo-112-6
+gwo-168-11
+gwo-56-19
 default-5
-
+gwo-168-13
+default-18
+gwo-168-8
+gwo-112-17
+gwo-56-10
+gwo-112-19
+gwo-56-6
+gwo-168-15
+gwo-168-2
+malla-17
+gwo-168-4
+gwo-56-12
+gwo-112-10
+gwo-168-17
+default-15
+gwo-112-20
+malla-15
+gwo-168-19
+gwo-56-2
+malla-18
+malla-7
+malla-16
+default-20
+gwo-56-14
+default-7
+gwo-112-3
+default-4
+gwo-56-3
+gwo-56-8
+gwo-56-7
+malla-11
+malla-10
+gwo-56-13
