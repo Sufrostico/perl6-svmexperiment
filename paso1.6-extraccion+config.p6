@@ -18,12 +18,19 @@ my @archivo = split "\n", $texto ;
 
 # Escribe la sección general
 escribir_tratamiento("general", %configuracion<general>);
-say "\n";
+print "\n";
 
 loop (my $i = 0; $i < @archivo.elems; $i++){
 
 
     given @archivo[$i] {
+
+        when / default'-'\d+ / {
+
+            escribir_tratamiento($_, %configuracion{$_});
+            print "\n";
+
+        }
 
         when / malla'-'\d+ / {
 
@@ -87,7 +94,7 @@ sub mostrar_tratamiento($tratamiento, @archivo, $brinco) {
 
 sub escribir_tratamiento($nombre_tratamiento, %tratamiento){
 
-    say "[ $nombre_tratamiento ] ";
+    say "[ $nombre_tratamiento ]";
 
 #    say "paso1-comando = %tratamiento<paso1-comando>";
 #    say "paso1-parametros  = %tratamiento<paso1-parametros>";
@@ -100,7 +107,7 @@ sub escribir_tratamiento($nombre_tratamiento, %tratamiento){
 
 sub escribir_orden(@orden){
 
-    say "[ orden ] ";
+    say "[ orden ]";
 
     for @orden -> $tratamiento {
         say $tratamiento;
