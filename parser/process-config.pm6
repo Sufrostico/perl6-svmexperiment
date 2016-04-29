@@ -12,7 +12,7 @@ sub normalizar_archivo( %configuración){
 
         # para el paso 1
         if %configuración{$id_actual}<paso1-comando> === Any {
-            %configuración{$id_actual}<paso1-comandos> = %configuración<general><paso1-comandos>;
+            %configuración{$id_actual}<paso1-comando> = %configuración<general><paso1-comando>;
         } 
 
         if %configuración{$id_actual}<paso1-parametros> === Any {
